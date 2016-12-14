@@ -88,3 +88,31 @@ const { connector } = require('../store')
 module.exports = connector(Home)
 
 ```
+
+---
+
+Add Redux Thunk
+
+```
+npm install redux-thunk
+```
+
+src/store.js
+
+```
+const { createStore, applyMiddleware } = require('redux')
+import thunk from 'redux-thunk'
+
+
+```
+```
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setName(name) {
+      setTimeout(_ => {
+        dispatch({type: 'SET_NAME', value: name})
+      }, 500)
+    }
+  }
+}
+```

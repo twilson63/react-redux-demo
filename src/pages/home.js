@@ -14,5 +14,6 @@ module.exports = connector((props) =>
       value={props.name}
       onChange={e => props.setName(e.target.value)}
     />
+    <div>{props.name}</div>
   </div>
 )
